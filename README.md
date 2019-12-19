@@ -1,9 +1,42 @@
----
-title: 2019-12-19未命名文件 
-tags: 新建,模板,小书匠
-renderNumberedHeading: true
-grammar_cjkRuby: true
----
+**网易云项目介绍** 预览地址：http://120.77.242.209/music/
+
+1.歌单界面滚动时上边的标题也会随着滚动变化，每个歌单的top的图片都不一样
 
 
-欢迎使用 **{小书匠}(xiaoshujiang)编辑器**，您可以通过 `小书匠主按钮>模板` 里的模板管理来改变新建文章的内容。
+![enter description here](https://media.giphy.com/media/Rhr9TchI5Xl7wtU5DT/giphy.gif)
+
+2.每日推荐界面，有着与歌单页面一样的滚动动画，且未登陆时不会加载
+
+
+![enter description here](https://media.giphy.com/media/XedHeTYdCnWHoy8MEj/giphy.gif)
+
+3.首页下拉刷新，会重新推荐歌单
+
+
+![enter description here](https://media.giphy.com/media/ic1nbjshUrOdTfMn5K/giphy.gif)
+
+4.听歌界面，唱片随着播放状态旋转，歌词组件会跟随正在唱的歌词
+
+![enter description here](https://media.giphy.com/media/YmnBlN9nDePpLGvBwr/giphy.gif)
+
+5.如果歌名过长，还会有平移的效果
+
+![enter description here](https://media.giphy.com/media/kHqpK80ojZgftAj7Dc/giphy.gif)
+
+6.歌曲切换
+
+![enter description here](https://media.giphy.com/media/js0jfudTubaCTiCnjc/giphy.gif)
+
+7.一些按键有波纹的效果
+
+![enter description here](https://media.giphy.com/media/lnm9wNsQHb750EF0dN/giphy.gif)
+
+8.搜索界面
+
+![enter description here](https://media.giphy.com/media/idMIOm15tolj2XjqAH/giphy.gif)
+
+9.视频界面
+
+![enter description here](https://media.giphy.com/media/LqTLBcB6IzEVcXxPoP/giphy.gif)
+
+**更多功能等你发现...**
