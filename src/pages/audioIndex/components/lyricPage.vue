@@ -44,7 +44,7 @@ export default {
     }
   },
   methods: {
-    setCurrent (index) {
+    setScroll (index) {
       // 这里求出中线的位置为 8.3 rem
       // 通过 歌词容器的高度 / 2 - 每个 li 的高度 / 2
       // 每次移动是移动一行歌词的高度，一行歌词高度是 0.6 rem

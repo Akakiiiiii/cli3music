@@ -40,11 +40,17 @@ export default {
         setTimeout(() => {
           this.textDom = this.$refs.songName
           this.jugShowFake()
-        }, 100)
+        }, 200)
       } else {
         console.log('已经清除')
         clearInterval(this.timer)
       }
+    },
+    audioSong () {
+      setTimeout(() => {
+        this.$refs.scrollWrap.scrollTo(0, 0)
+        this.showFake = false
+      }, 100)
     }
   },
   methods: {
@@ -55,6 +61,8 @@ export default {
         this.showFake = true
         this.wrapDom = this.$refs.scrollWrap
         this.scrollText()
+      } else {
+        this.showFake = false
       }
     },
     scrollText () {
@@ -68,7 +76,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ isFull: 'FULL_SCREEN' })
+    ...mapGetters({ isFull: 'FULL_SCREEN', audioSong: 'AUDIO_ING_SONG' })
   }
 }
 </script>

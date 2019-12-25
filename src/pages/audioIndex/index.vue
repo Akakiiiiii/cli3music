@@ -95,7 +95,8 @@ export default {
       noLyric: false,
       isShowAudioList: false,
       noLyricText: '',
-      isLike: false
+      isLike: false,
+      oldSong: {}
     }
   },
   computed: {
@@ -124,6 +125,8 @@ export default {
      * 将一些歌曲信息设置
      */
     audioSong: function (val, oldVal) {
+      // 记录旧的歌曲，下一首歌不能播放时跳转回来
+      this.oldSong = oldVal
       // 查看当前播放歌曲是否已喜欢
       if (!Object.keys(val).length) {
         this.$refs.audio.src = ''
@@ -135,23 +138,21 @@ export default {
         return
       }
       console.log('当前歌曲已经变化')
-      this.$nextTick(() => {
-        if (val.dj) {
-          this._checkSong(val.mainTrackId)
-        } else {
-          this._checkSong(val.id)
-        }
-        this.albumName = val.al ? val.al.name : val.album ? val.album.name : ''
-        this.allTime = val.duration ? val.duration : val.dt ? val.dt : 0
-        this.artist = val.album ? val.album.artists : val.ar ? val.ar : ''
-        this.imgUrl = val.album
-          ? val.album.picUrl
-          : val.al
-            ? val.al.picUrl
-            : val.album
-              ? val.album.artist.img1v1Url : val.coverUrl ? val.coverUrl : ''
-        this.name = this.setName(val.name)
-      })
+      if (val.dj) {
+        this._checkSong(val.mainTrackId)
+      } else {
+        this._checkSong(val.id)
+      }
+      this.albumName = val.al ? val.al.name : val.album ? val.album.name : ''
+      this.allTime = val.duration ? val.duration : val.dt ? val.dt : 0
+      this.artist = val.album ? val.album.artists : val.ar ? val.ar : ''
+      this.imgUrl = val.album
+        ? val.album.picUrl
+        : val.al
+          ? val.al.picUrl
+          : val.album
+            ? val.album.artist.img1v1Url : val.coverUrl ? val.coverUrl : ''
+      this.name = this.setName(val.name)
     },
     'playList.length': function (newV) {
       if (!newV) {
@@ -175,10 +176,15 @@ export default {
       api.songUrlFn(id)
         .then(res => {
           const data = res.data
-          if (data.code === 200) {
+          if (data.code === 200 && data.data[0].url) {
             this.url = data.data[0].url
             this.audioTimeUpdate()
             this.toPlay()
+          } else {
+            const index = this.playList.findIndex((item) => {
+              return item.id === this.oldSong.id
+            })
+            this.setIndex(index)
           }
         })
     },
@@ -437,6 +443,7 @@ export default {
      * 添加歌曲时间更新事件
      */
     audioTimeUpdate () {
+      this.$refs.audio.removeEventListener('timeupdate', this.setTime)
       this.$refs.audio.addEventListener('timeupdate', this.setTime)
     },
     /**
@@ -476,7 +483,7 @@ export default {
         // 设置歌词显示
         this.showLyric(index, this.ruleLyric)
         // 设置歌词页面的显示规则,传入当前歌词索引信息
-        this.$refs.lyric.setCurrent(this.nowLyricIndex)
+        this.$refs.lyric.setScroll(this.nowLyricIndex)
       }
     },
     /**
