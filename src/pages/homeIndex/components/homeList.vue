@@ -34,6 +34,7 @@ export default {
     num: {
       // 为了发现对象内部值的变化，可以在选项参数中指定 deep: true 。
       // 这样设置后 props 成功可以获取到
+      immediate: true,
       deep: true,
       handler (val, oldVal) {
         this.recordNum = val.recordNum
