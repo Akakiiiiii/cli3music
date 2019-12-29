@@ -3,12 +3,12 @@
 1.歌单界面滚动时上边的标题也会随着滚动变化，每个歌单的top的图片都不一样
 
 
-![enter description here](./gif/lidqBT.gif)
+![enter description here](https://github.com/Akakiiiiii/cli3music/blob/master/gif/lidqBT.gif)
 
 2.每日推荐界面，有着与歌单页面一样的滚动动画，且未登陆时不会加载
 
 
-![enter description here](./)
+![enter description here](https://github.com/Akakiiiiii/cli3music/blob/master/gif/liw3VS.gif)
 
 3.首页下拉刷新，会重新推荐歌单
 
