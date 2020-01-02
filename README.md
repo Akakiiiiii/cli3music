@@ -23,33 +23,33 @@ npm run serve
 1.歌单界面滚动时上边的标题也会随着滚动变化，每个歌单的top的图片都不一样
 
 LV
-![enter description here](https://github.com/AkakiiiiiAi/cliV3music/blob/master/gif/lidqBT.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6j0O.gif)
 
 2.每日推荐界面，有着与歌单页面一样的滚动动画，且未登陆时不会加载
 
 
-![enter description here](https://github.com/Akakiiiiii/cli3music/blob/master/gif/liw3VS.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6v7D.gif)
 
 3.首页下拉刷新，会重新推荐歌单
 
 
-![enter description here](https://s2.ax1x.com/2019/12/25/liwwrV.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6XnK.gif)
 
 4.听歌界面，唱片随着播放状态旋转，歌词组件会跟随正在唱的歌词
 
-![enter description here](https://s2.ax1x.com/2019/12/25/liwraF.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6LX6.gif)
 
 5.如果歌名过长，还会有平移的效果
 
-![enter description here](https://s2.ax1x.com/2019/12/25/liw0bT.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6q6x.gif)
 
 6.歌曲切换
 
-![enter description here](https://s2.ax1x.com/2019/12/25/li0ui4.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6Ik4.gif)
 
 7.一些按键有波纹的效果
 
-![enter description here](https://s2.ax1x.com/2019/12/25/liwdK0.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6fmT.gif)
 
 8.搜索界面
 
@@ -57,6 +57,6 @@ LV
 
 9.视频界面
 
-![enter description here](https://s2.ax1x.com/2019/12/25/li0KJJ.gif)
+![enter description here](https://s2.ax1x.com/2020/01/02/lt6Th9.gif)
 
 **更多功能等你发现...**
