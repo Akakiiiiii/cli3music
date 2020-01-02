@@ -2,24 +2,24 @@
 
 预览地址：http://120.77.242.209/music/
 
-**前言**
+## 前言
 随着对vue的不断学习，在学习慕课网上黄轶老师的饿了么项目与音乐项目后，寻思着自己也捣鼓一个vue的项目，可以苦于后台数据的获取迟迟没有动手，偶尔一天看到github的优质开源项目[NeteaseCloudMusicAp](https://github.com/Binaryify/NeteaseCloudMusicApi)，该项目使得网易云后台的api得以使用，于是我就开始了项目的搭建之路。
 对你学习Vue有帮助的话，欢迎点个**star**与**issue**
-**项目依赖**
+## 项目依赖
 前端：Vue全家桶+Wave+ESLint+Axios+Less+Vant+Vue-lazyload
 后端：[NeteaseCloudMusicAp](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
-**项目运行**
+## 项目运行
 傻瓜式地启动方式
 ``` Gitbush
 git clone git@github.com:Akakiiiiii/cli3music.git
 npm install
 npm run serve
 ```
-**功能概览**
+## 功能概览
 网易云音乐app基本上的功能与细节和ui都实现了，媲美原生app的体验与流畅
 
-**图片预览**
+## 图片预览
 1.歌单界面滚动时上边的标题也会随着滚动变化，每个歌单的top的图片都不一样
 
 LV
