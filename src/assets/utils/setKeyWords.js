@@ -4,21 +4,18 @@
  * @param {*} val
  */
 export const filterSetKeyWords = (keyword, val, property) => {
-  let results = []
-  const _val = val
-  _val.map((item, index) => {
+  // 匹配关键字正则
+  let replaceReg = new RegExp(keyword, 'g')
+  // 高亮替换v-html值
+  let replaceString =
+    `<i style="color: #3399EA">${keyword}</i>`
+  val.map((item) => {
     if (keyword && keyword.length > 0) {
-      // 匹配关键字正则
-      let replaceReg = new RegExp(keyword, 'g')
-      // 高亮替换v-html值
-      let replaceString =
-        `<i style="color: #3399EA">${keyword}</i>`
-      _val[index][property] = item[property].replace(
+      item[property] = item[property].replace(
         replaceReg,
         replaceString
       )
     }
   })
-  results = _val
-  return results
+  return val
 }
