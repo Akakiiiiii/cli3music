@@ -7,13 +7,12 @@
          @click="clearHistory"></i>
     </div>
     <div class="wrapper">
-      <div class="container ">
+      <div class="container">
         <ul class="icons-group">
           <li class="icon-list"
               @click="toSearch(item)"
               v-for="(item, index) in history"
-              :key="index">{{item}}
-          </li>
+              :key="index">{{item}}</li>
         </ul>
       </div>
     </div>
@@ -39,7 +38,7 @@ export default {
     getHistory () {
       // 兄弟组件进行值的接收
       // Bus.$on('方法名(与兄弟组件方法名一致), 回调函数 参数为传过来的值')
-      Bus.$on('history', (history) => {
+      Bus.$on('history', history => {
         this.history = history
         console.log(history)
       })

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import axios from 'axios'
 import fastclick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 import topTip from '@/components/top-tip'
@@ -23,7 +24,12 @@ import {
 } from 'vant'
 import 'styles/reset.css'
 import 'styles/border.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+// require styles
+import 'swiper/dist/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper /* { default global options } */)
 smoothscroll.polyfill()
 
 fastclick.attach(document.body)
@@ -50,6 +56,7 @@ Vue.use(VueLazyload, {
 Vue.component('top-tip', topTip)
 // eslint-disable-next-line
 Vue.prototype.$wave = (Waves)
+Vue.prototype.$axios = (axios)
 /* eslint-disable no-new */
 // eslint-disable-next-line no-unused-vars
 var vm = new Vue({

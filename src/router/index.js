@@ -326,5 +326,10 @@ export default new Router({
     path: '/comments',
     name: 'comments',
     component: comments
+  },
+  {
+    path: '/swiper',
+    name: 'swiper',
+    component: () => import('@/pages/swiperDemo/swiper')
   }]
 })
