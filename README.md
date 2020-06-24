@@ -58,5 +58,5 @@ npm run serve
 
 ![enter description here](https://s2.ax1x.com/2020/01/02/lt6Th9.gif)
 
-**更多功能等你发现...**
+**更多功能等你发现...**  
 项目参考了https://github.com/powerdong/Music-player ，站在前辈脚步下进行开发并且新增了很多功能与对项目的进行了很多优化
